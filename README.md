@@ -1,5 +1,16 @@
 # Work Day Calendar
 
+## Assignment
+Create a simple calendar application that allows a user to save events for each hour of a typical working day (9am–5pm). This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
+
+## Table of Contents:
+- [User Story](#User-Story)
+- [Acceptance Criteria](#Acceptance-Criteria)
+- [Screenshots](#Screenshots)
+- [What I Learned](#What-I-Learned)
+- [Built With](#Built-With)
+
+
 ## User Story
 AS AN employee with a busy schedule
 I WANT to add important events to a daily planner
@@ -19,3 +30,12 @@ WHEN I click the save button for that time block
 THEN the text for that event is saved in local storage
 WHEN I refresh the page
 THEN the saved events persist
+
+## Link
+Website link:
+
+## License 
+
+
+## Credits
+I would like to give credit to the Rutgers Fullstack Coding Bootcamp, Rommel and Ringo for providing me with the education and the neccessary tools to complete this project. I would like to give credit to ThomasCalle's git hub repo, it really helped me understand the assignment better. 
