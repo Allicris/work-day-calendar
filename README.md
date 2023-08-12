@@ -6,10 +6,8 @@ Create a simple calendar application that allows a user to save events for each 
 ## Table of Contents:
 - [User Story](#User-Story)
 - [Acceptance Criteria](#Acceptance-Criteria)
-- [Screenshots](#Screenshots)
-- [What I Learned](#What-I-Learned)
-- [Built With](#Built-With)
-
+- [Link](#Link)
+- [Credits](#Credits)
 
 ## User Story
 AS AN employee with a busy schedule
@@ -32,10 +30,7 @@ WHEN I refresh the page
 THEN the saved events persist
 
 ## Link
-Website link:
-
-## License 
-
+Website link: https://allicris.github.io/work-day-calendar/
 
 ## Credits
 I would like to give credit to the Rutgers Fullstack Coding Bootcamp, Rommel and Ringo for providing me with the education and the neccessary tools to complete this project. I would like to give credit to ThomasCalle's git hub repo, it really helped me understand the assignment better. 
