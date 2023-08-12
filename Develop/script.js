@@ -1,8 +1,8 @@
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
-const localSettings = {};
-dayjs.locale(localSettings);
+const localeSettings = {};
+dayjs.locale(localeSettings);
 
 $(function () {
   // TODO: Add code to apply the past, present, or future class to each time
@@ -12,14 +12,14 @@ $(function () {
   // current hour in 24-hour time?
 
   //Getting the current hour
-  const presentHour = dayjs().format('H');
+  const currentHour = dayjs().format('H');
   //Identifying the time block id and its status
-  function hourColors() {
+  function hourlyColor() {
     $('.time-block').each(function () {
       const blockHour = parseInt(this.id);
-      $(this).toggleClass('past', blockHour < presentHour);
-      $(this).toggleClass('present', blockHour === presentHour);
-      $(this).toggleClass('future', blockHour > presentHour);
+      $(this).toggleClass('past', blockHour < currentHour);
+      $(this).toggleClass('present', blockHour === currentHour);
+      $(this).toggleClass('future', blockHour > currentHour);
     });
   }
   // TODO: Add a listener for click events on the save button. This code should
@@ -28,7 +28,7 @@ $(function () {
   // function? How can DOM traversal be used to get the "hour-x" id of the
   // time-block containing the button that was clicked? How might the id be
   // useful when saving the description in local storage?
-  function textInput() {
+  function textEntry() {
     $('.saveBtn').on('click', function () {
       const key = $(this).parent().attr('id');
       const value = $(this).siblings('.description').val();
@@ -58,20 +58,20 @@ $(function () {
   });
 
   // TODO: Add code to display the current date in the header of the page
-  function timeUpdate() {
-const date = $('#date');
-const time = $('#time');
-const today = dayjs().format('dddd, MMMM D, YYYY');
+  function updateTime() {
+const dateElement = $('#date');
+const timeElement = $('#time');
+const currentDay = dayjs().format('dddd, MMMM D, YYYY');
 const currentTime = dayjs().format('hh:mm:ss A');
-date.text(today);
-time.text(currentTime);
+dateElement.text(currentDay);
+timeElement.text(currentTime);
 }
 
-hourColors();
-textInput();
+hourlyColor();
+textEntry();
 refreshColor();
 
-setInterval(timeUpdate, 1000);
+setInterval(updateTime, 1000);
 });
 
 
