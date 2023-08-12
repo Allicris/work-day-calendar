@@ -28,23 +28,16 @@
     <header class="p-5 mb-4 border-bottom border-dark text-center">
       <h1 class="display-3">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
-      <p id="currentDay" class="lead"></p>
+      <!-- Day.js is running in the javascript file and will display the updated time here-->
+      <p id="theDay" class="lead"></p>
       <p>Current Date & Time:</p>
       <p>Date: <span id="date"></span> ~ Time: <span id="time"></span></p>
     </header>
     <div class="container-fluid px-5">
       <div class="row"></div>
-      <!-- Use class for "past", "present", and "future" to apply styles to the
-        time-block divs accordingly. The javascript will need to do this by
-        adding/removing these classes on each div by comparing the hour in the
-        id to the current hour. The html provided below is meant to be an example
-        demonstrating how the css provided can be leveraged to create the
-        desired layout and colors. The html below should be removed or updated
-        in the finished product. Remember to delete this comment once the
-        code is implemented.
-        -->
         
-      <!-- Example of a past time block. The "past" class adds a gray background color. -->
+      <!-- Depending on what time of the day you are looking at this, the "past" class adds a gray background color, the "present" adds a red background color
+        and the future add a green background color. -->
       <div id="09" class="row time-block">
         <div class="col-2 col-md-1 hour text-center py-3">9AM</div>
         <textarea id='text-09' class="col-8 col-md-10 description" rows="3"></textarea>
@@ -52,8 +45,6 @@
           <i class="fas fa-save" aria-hidden="true"></i>
         </button>
       </div>
-
-      <!-- Example of a present time block. The "present" class adds a red background color. -->
       <div id="10" class="row time-block">
         <div class="col-2 col-md-1 hour text-center py-3">10AM</div>
         <textarea id='text-10' class="col-8 col-md-10 description" rows="3"> </textarea>
@@ -61,8 +52,6 @@
           <i class="fas fa-save" aria-hidden="true"></i>
         </button>
       </div>
-
-      <!-- Example of a future time block. The "future" class adds a green background color. -->
       <div id="11" class="row time-block">
         <div class="col-2 col-md-1 hour text-center py-3">11AM</div>
         <textarea id='text-11' class="col-8 col-md-10 description" rows="3"> </textarea>
@@ -122,6 +111,7 @@
 <footer>
   <br>
 </footer>
+<!-- We need jQuery and Day.js here the same way we need our javascript and css sheets here. -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
     integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
